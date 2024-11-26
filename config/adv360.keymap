@@ -36,7 +36,7 @@
         flavor = "tap-preferred";
         quick-tap-ms = <150>;
         require-prior-idle-ms = <150>;
-        bindings = <&macro_braces>, <&kp LBKT>;
+        bindings = <&macro_braces &kp LBKT>;
     };
 
     #define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
@@ -48,7 +48,7 @@
         flavor = "tap-preferred"; \
         quick-tap-ms = <QUICK_TAP_TERM>; \
         require-prior-idle-ms = <QUICK_TAP_TERM>; \
-        bindings = <HOLD>, <TAP>; \
+        bindings = <HOLD TAP>; \
     };
 
     hm: homerow_mods {
