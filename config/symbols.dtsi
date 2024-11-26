@@ -1,0 +1,16 @@
+{
+    #define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
+         NAME: NAME { \
+            compatible = "zmk,behavior-hold-tap"; \
+            label = ZMK_MACRO_STRINGIFY(NAME); \
+            #binding-cells = <2>; \
+            tapping-term-ms = <TAPPING_TERM>; \
+            flavor = "tap-preferred"; \
+            quick-tap-ms = <QUICK_TAP_TERM>; \
+            require-prior-idle-ms = <QUICK_TAP_TERM>; \
+            bindings = <HOLD>, <TAP>; \
+        };
+        symbols {
+            TAPHOLD_SYMBOL(th_sq_br, &macro_braces, &LBKT)
+    };
+};
