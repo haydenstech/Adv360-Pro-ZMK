@@ -39,7 +39,6 @@
         bindings = <&macro_braces>, <&kp LBKT>;
     };
 
-    /*
     #define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
     NAME: NAME { \
         compatible = "zmk,behavior-hold-tap"; \
@@ -51,7 +50,6 @@
         require-prior-idle-ms = <QUICK_TAP_TERM>; \
         bindings = <HOLD>, <TAP>; \
     };
-    */
 
     hm: homerow_mods {
         compatible = "zmk,behavior-hold-tap";
@@ -63,7 +61,7 @@
         bindings = <&kp>, <&kp>;
     };
 
-    /* TAPHOLD_SYMBOL(th_sq_br, &kp LBKT, &macro_braces) */
+    TAPHOLD_SYMBOL(th_sq_br, &kp LBKT, &macro_braces)
   };
 
     keymap {
