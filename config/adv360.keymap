@@ -30,7 +30,7 @@
 
     test1: test1 {
         compatible = "zmk,behavior-hold-tap";
-        label = test1;
+        label = "test1";
         #binding-cells = <2>;
         tapping-term-ms = <150>;
         flavor = "tap-preferred";
