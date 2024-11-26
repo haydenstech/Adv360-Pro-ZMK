@@ -28,6 +28,17 @@
     #define QUICK_TAP_TERM 175
     #define ADAPTIVE_KEY_TIMEOUT 2000
 
+    test1: test1 { \
+        compatible = "zmk,behavior-hold-tap"; \
+        label = test1; \
+        #binding-cells = <2>; \
+        tapping-term-ms = 150; \
+        flavor = "tap-preferred"; \
+        quick-tap-ms = 150; \
+        require-prior-idle-ms = 150; \
+        bindings = &macro_braces, &LBKT; \
+    };
+
     #define TAPHOLD_SYMBOL(NAME, TAP, HOLD) \
     NAME: NAME { \
         compatible = "zmk,behavior-hold-tap"; \
